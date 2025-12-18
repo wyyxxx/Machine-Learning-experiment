@@ -10,7 +10,7 @@ from sklearn.neural_network import MLPClassifier
 
 
 # 1. 加载数据集
-df = pd.read_csv('iris_data/iris.data', header=None)
+df = pd.read_csv('iris.data', header=None)
 
 X = df.iloc[:, :4].values
 y = df.iloc[:, 4].values
@@ -71,4 +71,5 @@ print(f"训练时间 (s): {mlp_train_time:.5f}")
 print(f"预测时间 (s): {mlp_pred_time:.5f}")
 print(f"准确率: {mlp_accuracy:.4f}")
 print(classification_report(y_test, y_pred_mlp, target_names=target_names))
+
 
